@@ -3,7 +3,7 @@ document.write(let); //html 창에 표시
 alert(let); //경고창 알람
 const input = prompt("알림 이름", "기본 입력 예시");    //알림창 입력 반환
 const input = confirm("ok?");                   //알림창 bool형 반환
-*/
+
 const gan = ["경", "신", "임", "계", "갑", "을", '"병', "정"];
 const tee = [
   "신",
@@ -36,7 +36,7 @@ var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const result = arr.filter(ele => ele % 2 === 0).map(ele => ele * 2);
 console.log(result);
 */
-/*
+
 let h = 0;
 let m = 0;
 let s = 0;
@@ -61,5 +61,8 @@ const timerID = setInterval(() => {
     m = 0;
     s = 0;
   }
-}, 1 * 100);
-*/
+  if (s % 10 === 0) {
+    const input = confirm("10초 경과 : 정지 or 계속");
+    if (input === true) clearInterval(timerID);
+  }
+}, 1 * 1000);
