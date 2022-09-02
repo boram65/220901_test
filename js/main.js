@@ -49,6 +49,9 @@ const timerID = setInterval(() => {
   mm = String(m).padStart(2, "0");
   ss = String(s).padStart(2, "0");
   console.log(`${hh}:${mm}:${ss}`);
+  document.getElementsByTagName("span")[0].innerText = hh;
+  document.getElementsByTagName("span")[2].innerText = mm;
+  document.getElementsByTagName("span")[4].innerText = ss;
   s++;
   if (s === 60) {
     s = 0;
@@ -61,8 +64,9 @@ const timerID = setInterval(() => {
     m = 0;
     s = 0;
   }
+  /*
   if (s % 10 === 0) {
     const input = confirm("10초 경과 : 정지 or 계속");
     if (input === true) clearInterval(timerID);
-  }
-}, 1 * 1000);
+  }*/
+}, 1 * 100);
