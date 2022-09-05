@@ -10,7 +10,12 @@ const arr = [
   "최승준",
   "이다혜",
 ];
+const arr2 = [5, 5, 5, 2, 3];
 
+const sum = arr2.reduce((v1, v2) => v1 + v2);
+
+//console.log(sum);
+/*
 const fillterfn = (value, index, arr) => {
   console.log(`[${index}] ${value}`);
   //return value.indexOf("이") === 0 ? true : false;
