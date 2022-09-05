@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test2</title>
+
+    <script>
+      console.log("프로그램 시작");
+      /*
+      const byt = (name, pay, wTime) => {
+        if (pay === undefined || typeof pay !== "number" || pay <= 0) return;
+
+        console.log(`이름은 : ${name}`);
+        console.log(`시급은 : ${pay}`);
+        console.log(`근무시간은 : ${wTime}`);
+        console.log(`하루 일당은 : ${pay * wTime}`);
+        console.log("-----------");
+      };*/
+
+      const myfunc = (type, arr) => {
+        let val = arr[0];
+        if (type === "max") {
+          for (i in arr) {
+            if (val < arr[i]) val = arr[i];
+          }
+          return val;
+        } else if (type === "min") {
+          for (i in arr) {
+            if (val > arr[i]) val = arr[i];
+          }
+          return val;
+        } else {
+          console.log("잘못입력함");
+          return;
+        }
+      };
+
+      const input = [10, 50, 2, 10, 100, 20, 62];
+
+      console.log(myfunc("min", input));
+
+      console.log(myfunc("max", input));
+
+      //byt("최도원", 1000, 6);
+    </script>
+  </head>
+  <body></body>
+</html>

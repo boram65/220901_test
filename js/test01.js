@@ -1,5 +1,4 @@
 /*함수 test*/
-document.write("LIVE");
 
 const myPrint = (...data) => {
   console.log(data.join("_"));
