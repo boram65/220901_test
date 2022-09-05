@@ -49,9 +49,14 @@ const timerID = setInterval(() => {
   mm = String(m).padStart(2, "0");
   ss = String(s).padStart(2, "0");
   console.log(`${hh}:${mm}:${ss}`);
-  document.getElementsByTagName("span")[0].innerText = hh;
-  document.getElementsByTagName("span")[2].innerText = mm;
-  document.getElementsByTagName("span")[4].innerText = ss;
+  /*
+  document.getElementById("hour").innerText = hh;
+  document.getElementById("min").innerText = mm;
+  document.getElementById("sec").innerText = ss;
+  */
+  document.querySelector(".hour").innerText = hh;
+  document.querySelector(".min").innerText = mm;
+  document.querySelector(".sec").innerText = ss;
   s++;
   if (s === 60) {
     s = 0;

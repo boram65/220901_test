@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>최도원</title>
+    <style>
+      .blueColer {
+        color: blue;
+      }
+      h2 {
+        color: rgb(142, 201, 79);
+      }
+      .hour {
+        color: rgb(0, 180, 183);
+        background-color: pink;
+      }
+      .min {
+        color: rgb(194, 79, 190);
+        background-color: rgb(150, 225, 183);
+      }
+      .sec {
+        color: rgb(200, 112, 68);
+        background-color: rgb(162, 225, 251);
+      }
+      .bgColer {
+        background-color: black;
+      }
+    </style>
   </head>
   <body>
-    <h1>내 시계</h1>
+    <h2>내 시계</h2>
     <h1>
-      <span>00</span>
+      <span id="hour" class="hour">00</span>
       <span>:</span>
-      <span>00</span>
+      <span id="min" class="min">00</span>
       <span>:</span>
-      <span>02</span>
+      <span id="sec" class="sec">00</span>
     </h1>
   </body>
 </html>
