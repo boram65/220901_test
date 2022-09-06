@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(48, 48, 48);
+}
+div {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(18, 210, 187);
+  background-color: rgba(251, 255, 226, 1);
+  border: dashed rgba(123, 255, 0, 0.7);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 30px;
+}
