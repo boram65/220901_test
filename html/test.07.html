@@ -19,36 +19,133 @@
       #conta .school {
         border: dashed red;
       }
+      .target {
+        font-size: 30px;
+        display: inline-block;
+        margin: 10px;
+        padding: 1px 10px;
+        background-color: pink;
+        border-radius: 5px;
+        border: 2px solid gray;
+      }
+      .target:hover {
+        font-size: 30px;
+        display: inline-block;
+        margin: 10px;
+        padding: 1px 10px;
+        background-color: rgb(191, 41, 66);
+        border-radius: 5px;
+        border: 2px solid rgb(66, 66, 66);
+      }
     </style>
     <title>Document</title>
     <script>
       /*
-            document.body.textContent = "";
-            document.body.textContent += "<div>선문대학교</div>";
-            document.body.innerHTML += "<div>선문대학교</div>";
-      */
+                  document.body.textContent = "";
+                  document.body.textContent += "<div>선문대학교</div>";
+                  document.body.innerHTML += "<div>선문대학교</div>";
+            */
       document.addEventListener("DOMContentLoaded", () => {
-        const eleImg = document.querySelectorAll(".cover");
+        //const eleImg = document.querySelectorAll(".cover");
         /*
-        eleImg.forEach(function (eleImg, num) {
-          eleImg.setAttribute("src", `http://placekitten.com/${num * 50}/300`);
+              eleImg.forEach(function (eleImg, num) {
+                eleImg.setAttribute("src", `http://placekitten.com/${num * 50}/300`);
+              });
+      */
+        /*
+              const divs = document.querySelectorAll("div");
+              divs.forEach((div, idx) => {
+                const val = idx * 8;
+                div.style.height = `15px`;
+                div.style.backgroundColor = `rgba(${val},${val},${110})`;
+              });
+      */
+        /*
+              const nh1 = document.createElement("h1");
+              console.log(nh1);
+              nh1.textContent = "새로만든 div 입니다.";
+              document.body.appendChild(nh1);
+
+              const ntow = document.querySelector("#two");
+              const cpNh1 = nh1.cloneNode(nh1);
+              cpNh1.textContent = "복사된 h1입니다.";
+              ntow.appendChild(cpNh1);
+              */
+        /*
+              //요소를 지우는 방식
+              const dle = document.querySelector("#two");
+              const container = dle.parentNode;
+              container.removeChild(dle);
+              */
+        /*
+        const one = document.querySelector("#one");
+        const two = document.querySelector("#two");
+        const three = document.querySelector("#three");
+        const msg = document.querySelector("#msg");
+
+        const oneFunc = () => {
+          msg.textContent = "1클릭됨";
+        };
+
+        one.addEventListener("click", oneFunc());
+        two.addEventListener("click", () => {
+          msg.textContent = "2클릭됨";
+          two.removeEventListener("click", oneFunc());
         });
-*/
-        const divs = document.querySelectorAll("div");
-        divs.forEach((div, idx) => {
-          const val = idx * 5;
-          div.style.height = `10px`;
-          div.style.backgroundColor = `rgba(${val},${val},${val})`;
+        three.addEventListener("click", () => {
+          msg.textContent = "3클릭됨";
         });
+        */
+        //-------------------------------
+
+        const line = document.querySelector(".line");
+        const dleline = document.querySelector(".dleLine");
+        const state = document.querySelector(".state");
+        let clCount = 0;
+        let on_off = 0;
+        const click = document.querySelector(".target");
+        const count = document.querySelector(".count");
+        const reset = document.querySelector(".reset");
+
+        const clickCountFunc = () => {
+          if (on_off === 1) {
+            clCount++;
+            count.textContent = "클릭 회수 : " + `${clCount}`;
+          }
+        };
+        line.addEventListener("click", () => {
+          state.textContent = "이벤트 연결 : [연결]";
+          on_off = 1;
+        });
+        dleline.addEventListener("click", () => {
+          state.textContent = "이벤트 연결 : [해제]";
+          on_off = 0;
+        });
+        reset.addEventListener("click", () => {
+          clCount = 0;
+          count.textContent = "클릭 회수 : " + `${clCount}`;
+        });
+
+        click.addEventListener("click", clickCountFunc);
       });
     </script>
   </head>
   <body>
+    <div class="target">눌러봐</div>
+
+    <div class="count">클릭 회수 : 0</div>
+
+    <button class="line">연결</button>
+    <button class="dleLine">해제</button>
+    <button class="reset">초기화</button>
+    <p class="state">이벤트 연결 : [해제]</p>
+    <!-- <img src="" alt="" class="cover" />
     <img src="" alt="" class="cover" />
     <img src="" alt="" class="cover" />
     <img src="" alt="" class="cover" />
-    <img src="" alt="" class="cover" />
-    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" /> -->
+
+    <!-- <div></div>
     <div></div>
     <div></div>
     <div></div>
@@ -77,8 +174,7 @@
     <div></div>
     <div></div>
     <div></div>
-    <div></div>
-    <div></div>
+    <div></div> -->
     <script>
       /*
       const res = document.getElementById("moon");
