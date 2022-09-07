@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .sun {
+        color: rgb(77, 158, 125);
+      }
+      #moon {
+        color: red;
+      }
+      #conta {
+        background-color: aqua;
+        font-size: 100px;
+      }
+      #conta #moon {
+        color: pink;
+        font-weight: bold;
+      }
+      #conta .school {
+        border: dashed red;
+      }
+    </style>
+    <title>Document</title>
+    <script>
+      /*
+            document.body.textContent = "";
+            document.body.textContent += "<div>선문대학교</div>";
+            document.body.innerHTML += "<div>선문대학교</div>";
+      */
+      document.addEventListener("DOMContentLoaded", () => {
+        const eleImg = document.querySelectorAll(".cover");
+        /*
+        eleImg.forEach(function (eleImg, num) {
+          eleImg.setAttribute("src", `http://placekitten.com/${num * 50}/300`);
+        });
+*/
+        const divs = document.querySelectorAll("div");
+        divs.forEach((div, idx) => {
+          const val = idx * 5;
+          div.style.height = `10px`;
+          div.style.backgroundColor = `rgba(${val},${val},${val})`;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" />
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      /*
+      const res = document.getElementById("moon");
+      console.log(res.textContent);
+
+      const res2 = document.getElementsByClassName("sun");
+      console.log(res2.length);
+      console.log(res2);
+      console.log(res2[0].textContent, res2[1].textContent);
+      console.log("------------------------");
+      const res3 = document.getElementsByTagName("span");
+      console.log(res3);
+      console.log("------------------------");
+      console.log(document.querySelector(".sun"));
+      console.log("------------------------");
+      console.log(document.querySelector("#conta #moon"));
+      console.log("------------------------");
+      console.log(document.querySelectorAll(".sun"));
+
+
+      const div = document.querySelectorAll(".num");
+      console.log(div);
+      //let count = 0;
+      document.addEventListener("mousedown", () => {
+        console.log(`눌림.`);
+      });
+      document.addEventListener("mouseup", () => {
+        console.log(`놓음.`);
+      });
+      
+      document.body.textContent = "";
+      console.log((document.body.textContent += "<div>선문대학교</div>"));
+      console.log((document.body.innerHTML += "<div>선문대학교</div>"));
+      */
+    </script>
+  </body>
+</html>
