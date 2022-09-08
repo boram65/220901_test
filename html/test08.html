@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      #robot {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    </style>
+    <title>test09</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cat = document.querySelector("#robot");
+        let cuntr = document.querySelector("#robot");
+
+        let x = 0;
+        let y = 0;
+        document.addEventListener("keydown", thisEvent => {
+          switch (thisEvent.key) {
+            case "w":
+              x -= 10;
+              console.log(cuntr.style.top);
+              cuntr.style.top = `${x}px`;
+
+              break;
+            case "a":
+              y -= 10;
+              console.log(cuntr.style.left);
+              cuntr.style.left = `${y}px`;
+              break;
+            case "s":
+              x += 10;
+              console.log(cuntr.style.top);
+              cuntr.style.top = `${x}px`;
+              break;
+            case "d":
+              y += 10;
+              console.log(cuntr.style.letf);
+              cuntr.style.left = `${y}px`;
+              break;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body style="position: relative">
+    <div id="robot" style="font-size: 100px">🍄</div>
+  </body>
+</html>
