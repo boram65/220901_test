@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>email</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const text = document.querySelector(".email");
+        const bt = document.querySelector("#submit");
+        const err = document.querySelector(".error");
+        let email;
+        let goll;
+        let zum;
+
+        bt.addEventListener("click", () => {
+          email = text.value;
+          goll = email.indexOf("@");
+          zum = email.indexOf(".");
+          console.log(goll + "   " + zum);
+          if (goll !== -1 && zum !== -1) {
+            err.textContent = "이메일 형식 입니다.";
+          } else {
+            err.style.color = "red";
+            err.textContent = "이메일 형식이 아닙니다.";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" class="email" placeholder="email" value="" />
+      <button id="submit">로그인</button>
+    </div>
+    <div>
+      <span class="error">오류</span>
+    </div>
+  </body>
+</html>
