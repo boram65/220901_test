@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test10</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const text = document.querySelector("#text");
+        const scrin = document.querySelector("#leth");
+        let count = 0;
+        /*
+        text.addEventListener("keyup", () => {
+          count = text.value.length;
+          scrin.textContent = count;
+        });*/
+        let time;
+        text.addEventListener("focus", () => {
+          if (null !== time) {
+            time = setInterval(() => {
+              count = text.value.length;
+              scrin.textContent = count;
+              console.log("타이머 on");
+            }, 50);
+          }
+        });
+        text.addEventListener("blur", () => {
+          if (time) {
+            clearInterval(time);
+            console.log("타이머 off");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>글자수 세기</h1>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <div id="leth">0</div>
+  </body>
+</html>
