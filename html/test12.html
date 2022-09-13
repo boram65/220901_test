@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test12</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.querySelector("select");
+        const p = document.querySelector("p");
+
+        select.addEventListener("change", event => {
+          const options = event.currentTarget.options; //바뀐 목록 반환?
+          /*
+          const index = event.currentTarget.options.selectedIndex; //배열의 위치 반환
+          */
+
+          const list = [];
+          for (const option of options) {
+            if (option.selected) {
+              list.push(option.textContent);
+            }
+          }
+          p.textContent = `선택 : ${list.join(",")}`;
+          console.log(options);
+          console.log("=======");
+          console.log(list);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select>
+      <option value="">떡볶이</option>
+      <option value="">순대</option>
+      <option value="">오뎅</option>
+      <option value="">튀김</option>
+    </select>
+    <p></p>
+  </body>
+</html>
